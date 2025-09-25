@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Vorlage</title>
+    <title>Farben & Hintergrund</title>
 
     <script>(() => {
         const KEY = "theme";
@@ -58,28 +58,77 @@
                 </div>
             </div>
 
-            <h3 class="text-center mt-5">Test Test Test</h3>
+            <h3 class="text-center mt-5">Kapitel 3 - Farben & Hintergrund</h3>
             <div class="container mt-5">
 
-                <p><b>Thema 1</b></p>
+                <p><b>Textfarben</b></p>
                 <ul>
-                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
-                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.text-primary</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-secondary</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-success</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-danger</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-warning</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-info</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-light</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-dark</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-body</code></span>
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.text-muted</code></span>
+                        <i class="bi bi-arrow-right"></i> Vordefinierte Farbpalette für Texte (und Hintergründe).</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.text-white</code></span> <i class="bi bi-arrow-right"></i> Weißer Text, nur sinnvoll auf dunklem Hintergrund.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.</code></span> <i class="bi bi-arrow-right"></i> Entfernt spezielle Farbzuweisungen und erbt wieder die Standartfarbe.</li>
                 </ul>
 
-                <p><u><b>Merke:</b></u> Hier sollte was Sinnvolles stehen.</p>
             </div>
 
             <div class="container mt-5">
 
-                <p><b>Thema 2</b></p>
+                <p><b>Hintergrundfarben</b></p>
                 <ul>
-                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
-                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.bg-primary</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-secondary</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-success</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-danger</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-warning</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-info</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-light</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-dark</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-body</code></span>
+                        <i class="bi bi-arrow-right"></i> Vordefinierte Farbpalette für Hintergründe (und Texte).
+                    </li>
+                    <li>
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-body</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-secondary</code></span>,
+                        <span class="bg-secondary px-2 rounded"><code class="text-white">.bg-body-tertiary</code></span>
+                        <i class="bi bi-arrow-right"></i> Themen-freundliche Varianten, passen sich Light/Dark-Mode an.
+                    </li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.bg-transparent</code></span> <i class="bi bi-arrow-right"></i> Kein Hintergrund (transparent).</li>
                 </ul>
 
-                <p><u><b>Merke:</b></u> hier auch.</p>
             </div>
+
+            <div class="container mt-5">
+
+                <p><b>Kombination</b></p>
+                <ul>
+                    <li>Text- und Hintergrundklassen lassen sich beliebig kombinieren (z.B. dunkler Hintergrund mit heller Schrift).</li>
+                    <li>Bootstrap sorgt für konsistente Farben über alle Komponenten hinweg.</li>
+                </ul>
+
+            </div>
+            <div class="container mt-5">
+
+                <p><b>Merke</b></p>
+                <ul>
+                    <p><Farben dienen nicht nur der Optik, sondern signalisieren auch oft die Bedeutung:</p>
+                    <li><span class="bg-primary px-2 rounded"><code class="text-white">Primary</code></span> = Hauptaktion</li>
+                    <li><span class="bg-success px-2 rounded"><code class="text-white">Success</code></span> = Erfolg / Bestätigung</li>
+                    <li><span class="bg-danger px-2 rounded"><code class="text-white">Danger</code></span> = Fehler / Problem</li>
+                    <li><span class="bg-warning px-2 rounded"><code class="text-white">Warning</code></span> = Hinweis / Achtung</li>
+                    <li><span class="bg-info px-2 rounded"><code class="text-white">Info</code></span> = Zusatzinformation</li>
+                </ul>
+
+            </div>
+
 
         </main>
     </div>
