@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kapitel Vorlage</title>
+    <title>Vorlage</title>
 
     <script>(() => {
         const KEY = "theme";
@@ -32,8 +32,9 @@
     <div class="row">
 
         <nav class="d-none d-md-block col-md-3 bg-tertiary p-3">
-            <ol>
+            <ul>
                 <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="einleitung_html.html">Einleitung HTML</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
@@ -43,9 +44,8 @@
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
-            </ol>
+            </ul>
         </nav>
-
 
         <main class="col-12 col-md-9">
 
@@ -58,33 +58,31 @@
                 </div>
             </div>
 
-
             <h3 class="text-center mt-5">Test Test Test</h3>
             <div class="container mt-5">
 
                 <p><b>Thema 1</b></p>
-                <ol>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
-                </ol>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
+                </ul>
 
-                <p><u><b>Merke:</b></u> Hier sollte was sinnvolles stehen.</p>><
+                <p><u><b>Merke:</b></u> Hier sollte was Sinnvolles stehen.</p>
             </div>
 
             <div class="container mt-5">
 
                 <p><b>Thema 2</b></p>
-                <ol>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
-                </ol>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
+                </ul>
 
-                <p><u><b>Merke:</b></u> Hier auch.</p>><
+                <p><u><b>Merke:</b></u> hier auch.</p>
             </div>
 
-
         </main>
-    </div>
+</div>
 </div>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
@@ -93,49 +91,57 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
     </div>
     <div class="offcanvas-body">
-                 <ol>
-                <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_4.html">Spacing (Abstände)</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_5.html">Buttons</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_6.html">Forms</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
-            </ol>
+        <ul>
+            <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="einleitung_html.html">Einleitung HTML</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_4.html">Spacing (Abstände)</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_5.html">Buttons</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_6.html">Forms</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
+        </ul>
 
     </div>
 </div>
 
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     (() => {
         const KEY = "theme";
         const root = document.documentElement;
+        const body = document.body;
         const sw = document.getElementById("themeSwitch");
         const icon = document.getElementById("themeIcon");
         if (!sw) return;
 
-        // Startzustand setzen
+        function updateBodyBackground(mode) {
+            body.classList.remove("bg-body-secondary", "bg-body");
+            if (mode === "light") {
+                body.classList.add("bg-body-secondary");
+            } else {
+                body.classList.add("bg-body");
+            }
+        }
+
         const isDark = root.getAttribute("data-bs-theme") === "dark";
         sw.checked = isDark;
         icon.textContent = isDark ? "🌙" : "🌞";
+        updateBodyBackground(isDark ? "dark" : "light");
 
-        // Umschalten + merken
         sw.addEventListener("change", () => {
             const mode = sw.checked ? "dark" : "light";
             root.setAttribute("data-bs-theme", mode);
             localStorage.setItem(KEY, mode);
             icon.textContent = mode === "dark" ? "🌙" : "🌞";
+            updateBodyBackground(mode);
         });
     })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

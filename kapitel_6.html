@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kapitel Vorlage</title>
+    <title>Forms</title>
 
     <script>(() => {
         const KEY = "theme";
@@ -32,8 +32,9 @@
     <div class="row">
 
         <nav class="d-none d-md-block col-md-3 bg-tertiary p-3">
-            <ol>
+            <ul>
                 <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="einleitung_html.html">Einleitung HTML</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
@@ -43,9 +44,8 @@
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
-            </ol>
+            </ul>
         </nav>
-
 
         <main class="col-12 col-md-9">
 
@@ -58,30 +58,55 @@
                 </div>
             </div>
 
-
-            <h3 class="text-center mt-5">Test Test Test</h3>
+            <h3 class="text-center mt-5">Kapitel 6 - Forms</h3>
             <div class="container mt-5">
 
-                <p><b>Thema 1</b></p>
-                <ol>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
-                </ol>
+                <p><b>Grundelememte - Eingabefelder & Labels</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-label</code></span> <i class="bi bi-arrow-right"></i> Beschriftung für ein Eingabefeld (steht oberhalb).</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-control</code></span> <i class="bi bi-arrow-right"></i> Standard-Styling für Inputs (Text, E-Mail, Passwort, Zahl, Datum).</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-text</code></span> <i class="bi bi-arrow-right"></i> Kleiner Hinweistext unter dem Feld (z.B."Wir geben deine Daten nicht weiter").</li>
+                </ul>
 
-                <p><u><b>Merke:</b></u> Hier sollte was sinnvolles stehen.</p>><
+                <p><u><b>Merke:</b></u> Ohne <span class="bg-secondary px-2 rounded"><code class="text-white">.form-control</code></span> sehen Eingabefelder ungestylt aus.</p>
             </div>
 
             <div class="container mt-5">
 
-                <p><b>Thema 2</b></p>
-                <ol>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Was die so macht.</li>
-                    <li><span class="bg-dark text-light px-2 rounded"><code>.klasse</code></span> <i class="bi bi-arrow-right"></i> Und was die so macht.</li>
-                </ol>
+                <p><b>Auswahlfelder - Dropdown & Mehrzeiliges Textfeld</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-select</code></span> <i class="bi bi-arrow-right"></i> Einheitliches Sytling für <span class="bg-secondary px-2 rounded"><code class="text-white">&lt;select&gt;</code></span> (Dropdown).</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-control</code></span> bei <span class="bg-secondary px-2 rounded"><code class="text-white">&lt;textarea&gt;</code></span> <i class="bi bi-arrow-right"></i> mehrzeiliges Textfeld im gleichen Look.</li>
+                </ul>
 
-                <p><u><b>Merke:</b></u> Hier auch.</p>><
+                <p><u><b>Merke:</b></u> für normale Inputs und Textareas wird immer <code class="text-white">.form-control</code></span> genutzt.</p>
             </div>
 
+            <div class="container mt-5">
+
+                <p><b>Checkboxen, Radios & Switches</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-check</code></span> <i class="bi bi-arrow-right"></i> Container für Checkbox oder Radio.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-check-input</code></span> <i class="bi bi-arrow-right"></i> das eigentliche Input-feld (Checkbox oder Radiobutton).</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-check-label</code></span> <i class="bi bi-arrow-right"></i> Beschriftung neben der Checkbox/Radio.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.form-switch</code></span> <i class="bi bi-arrow-right"></i> macht eine Checkbox zum Kippschalter.</li>
+                </ul>
+
+                <p><u><b>Merke:</b></u> Für Checkboxen und Radios immer Container (<span class="bg-secondary px-2 rounded"><code class="text-white">.form-control</code></span>) + <span class="bg-secondary px-2 rounded"><code class="text-white">&lt;input&gt;</code></span> + <span class="bg-secondary px-2 rounded"><code class="text-white">&lt;label&gt;</code></span> verwenden.</p>
+            </div>
+
+            <div class="container mt-5">
+
+                <p><b>Buttons - Aktionen auslösen</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.btn</code></span> <i class="bi bi-arrow-right"></i> Basis-Klasse für alle Buttons.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.btn-primary</code></span> <i class="bi bi-arrow-right"></i> Farbliche Variante.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.btn-outline-*</code></span> <i class="bi bi-arrow-right"></i> Buttons mit Rahmen statt Fläche.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.btn-lg</code></span> <i class="bi bi-arrow-right"></i> Größe anpassen.</li>
+                </ul>
+
+                <p><u><b>Merke:</b></u> Buttons in Formularen haben fast immer <span class="bg-secondary px-2 rounded"><code class="text-white">type="submit"</code></span>.</p>
+            </div>
 
         </main>
     </div>
@@ -93,8 +118,9 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
     </div>
     <div class="offcanvas-body">
-        <ol>
+        <ul>
             <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="einleitung_html.html">Einleitung HTML</a></li>
             <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
             <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
             <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
@@ -104,38 +130,45 @@
             <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
             <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
             <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
-        </ol>
+        </ul>
 
     </div>
 </div>
 
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
     (() => {
         const KEY = "theme";
         const root = document.documentElement;
+        const body = document.body;
         const sw = document.getElementById("themeSwitch");
         const icon = document.getElementById("themeIcon");
         if (!sw) return;
 
-        // Startzustand setzen
+        function updateBodyBackground(mode) {
+            body.classList.remove("bg-body-secondary", "bg-body");
+            if (mode === "light") {
+                body.classList.add("bg-body-secondary");
+            } else {
+                body.classList.add("bg-body");
+            }
+        }
+
         const isDark = root.getAttribute("data-bs-theme") === "dark";
         sw.checked = isDark;
         icon.textContent = isDark ? "🌙" : "🌞";
+        updateBodyBackground(isDark ? "dark" : "light");
 
-        // Umschalten + merken
         sw.addEventListener("change", () => {
             const mode = sw.checked ? "dark" : "light";
             root.setAttribute("data-bs-theme", mode);
             localStorage.setItem(KEY, mode);
             icon.textContent = mode === "dark" ? "🌙" : "🌞";
+            updateBodyBackground(mode);
         });
     })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

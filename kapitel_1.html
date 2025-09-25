@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kapitel 1 - Layout & Grid System</title>
-
+    <title>Layout & Grid System</title>
 
     <script>(() => {
         const KEY = "theme";
@@ -18,23 +17,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 </head>
 <body>
-<div class="container-fluid">
+    <div class="container-fluid">
 
-    <div class="d-md-none bg-tertiary p-2">
-        <button class="btn btn-outline-secondary btn-sm"
+         <div class="d-md-none bg-tertiary p-2">
+             <button class="btn btn-outline-secondary btn-sm"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#mobileSidebar"
                 aria-controls="mobileSidebar">
-            <i class="bi bi-list"></i> Menü
-        </button>
-    </div>
+                <i class="bi bi-list"></i> Menü
+             </button>
+         </div>
 
-    <div class="row">
+        <div class="row">
 
         <nav class="d-none d-md-block col-md-3 bg-tertiary p-3">
-            <ol>
+            <ul>
                 <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="einleitung_html.html">Einleitung HTML</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
@@ -44,175 +44,172 @@
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
-            </ol>
+            </ul>
         </nav>
-
 
         <main class="col-12 col-md-9">
 
-    <div class="container mt-3 d-flex justify-content-end">
-        <div class="form-check form-switch m-0">
-            <input class="form-check-input" type="checkbox" id="themeSwitch" role="switch">
-            <label class="form-check-label" for="themeSwitch">
-                <span id="themeIcon">🌙</span>
-            </label>
+            <div class="container mt-3 d-flex justify-content-end">
+                <div class="form-check form-switch m-0">
+                    <input class="form-check-input" type="checkbox" id="themeSwitch" role="switch">
+                        <label class="form-check-label" for="themeSwitch">
+                        <span id="themeIcon">🌙</span>
+                        </label>
+                </div>
+            </div>
+
+        <h3 class="text-center mt-5">Kapitel 1 - Layout & Grid System</h3>
+        <div class="container mt-5">
+
+            <p><b>Container (Grundrahmen / Rahmen für Inhalte)</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.container</code></span> <i class="bi bi-arrow-right"></i> Fester, zentrierter Rahmen mit automatischen Seitenabständen.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.container-fluid</code></span> <i class="bi bi-arrow-right"></i> Volle Breite des Bildschirms (ohne Ränder).</li>
+                </ul>
+
+            <p><u><b>Merke:</b></u> Container = "äußerer Rahmen", ohne Container ist Grid wackelig.</p>
+        </div>
+
+        <div class="container mt-5">
+
+            <p><b>Row & Column (Raster aufbauen)</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.row</code></span> <i class="bi bi-arrow-right"></i> Startet eine Zeile im Grid (Raster) 12 Spalten Logik.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.col</code></span> <i class="bi bi-arrow-right"></i> Spalte, die den verfügbaren Platz gleichmäßig aufteilt.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.col-1</code></span> ... <span class="bg-secondary px-2 rounded"><code class="text-white">.col-12</code></span><i class="bi bi-arrow-right"></i> Feste Spaltenbreite (z.B. <span class="bg-secondary px-2 rounded"><code class="text-white">.col-6</code></span> = halbe Breite.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.col-{breakpoint}-{n}</code></span> <i class="bi bi-arrow-right"></i> Responsive Spaltenbreite (z.B. <span class="bg-secondary px-2 rounded"><code class="text-white">col-md-4</code></span>). Ab mittlerer Bildschirmgröße, ein drittel Breite, auf kleineren Geräten automatisch 100%.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.col-auto</code></span> <i class="bi bi-arrow-right"></i> So breit wie der Inhalt, der Rest bleibt frei.</li>
+                </ul>
+
+            <p><u><b>Merke:</b></u> <span class="bg-secondary px-2 rounded"><code class="text-white">row</code></span> enthält <span class="bg-secondary px-2 rounded"><code class="text-white">col</code></span>; Summe der <span class="bg-secondary px-2 rounded"><code class="text-white">col</code></span>-Breiten pro Zeile ≤ 12.</p>
+        </div>
+
+        <div class="container mt-5">
+
+            <p><b>Gutter (Abstände zwischen Zeilen und Spalten)</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.g-0</code></span> <i class="bi bi-arrow-right"></i> Kein Abstand zwischen Spalten.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.g-3</code></span> <i class="bi bi-arrow-right"></i> Standartabstand auf beiden Achsen (Skala 0-5).</li>
+                     <li><span class="bg-secondary px-2 rounded"><code class="text-white">.gx-0</code></span> ... <span class="bg-secondary px-2 rounded"><code class="text-white">.gx-5</code></span> <i class="bi bi-arrow-right"></i> Horizontaler Abstand zwischen Spalten.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.gy-0</code></span> ... <span class="bg-secondary px-2 rounded"><code class="text-white">.gy-5</code></span><i class="bi bi-arrow-right"></i> Vertikaler Abstand zwischen Spalten.</li>
+                </ul>
+        </div>
+
+        <div class="container mt-5">
+
+            <p><b>Responsive Breakpoints (Größenlogik)</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">sm</code></span> ≥ 576px, <span class="bg-secondary px-2 rounded"><code class="text-white">md</code></span> ≥ 768px, <span class="bg-secondary px-2 rounded"><code class="text-white">lg</code></span> ≥ 992px, <span class="bg-secondary px-2 rounded"><code class="text-white">xl</code></span> ≥ 1200px, <span class="bg-secondary px-2 rounded"><code class="text-white">xxl</code></span> ≥ 1400px. </li>
+                    <li>Beispiel: <span class="bg-secondary px-2 rounded"><code class="text-white">.col.12</code></span> Volle Breite, Mobil / <span class="bg-secondary px-2 rounded"><code class="text-white">.col-md-6</code></span> Halbe Seite ab Medium / <span class="bg-secondary px-2 rounded"><code class="text-white">.col-lg-4</code></span> Drittel Seite ab Large</li>
+                    <li>Utilities sind ebenfalls breakpoint-fähig: z.B. <span class="bg-secondary px-2 rounded"><code class="text-white">.d-none</code></span> oder  <span class="bg-secondary px-2 rounded"><code class="text-white">.d-md-block</code></span>.</li>
+                </ul>
+
+            <p><u><b>Merke:</b></u> Klassen mit <span class="bg-secondary px-2 rounded"><code class="text-white">md</code></span> gelten <b>ab</b> diesem Breakpoint aufwärts.</p>
+        </div>
+
+        <div class="container mt-5">
+
+            <p><b>Flexbox-Utilities (Inhalte positionieren)</b></p>
+                <ul>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.d-flex</code></span> <i class="bi bi-arrow-right"></i> Flex-Layout aktivieren.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.flex-row</code></span> / <span class="bg-secondary px-2 rounded"><code class="text-white">.flex-column</code></span> <i class="bi bi-arrow-right"></i> Richtung waagrecht / senkrecht.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.justify-content-start|-center|-end|-between|-around|-evenly</code></span> Horizontale Ausrichtungsvarianten.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.align-items-start|-center|-end|-stretch</code></span> <i class="bi bi-arrow-right"></i> Vertikal in der Zeile ausrichten.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.flex-wrap</code></span> / <span class="bg-secondary px-2 rounded"><code class="text-white">.flex-nowrap</code></span> <i class="bi bi-arrow-right"></i> Zeilenumbruch erlauben / verhindern.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.align-self-start|-center|-end </code></span> <i class="bi bi-arrow-right"></i> Einzelnes Kind abweichend ausrichten.</li>
+                    <li><span class="bg-secondary px-2 rounded"><code class="text-white">.gap-0</code></span> ... <span class="bg-secondary px-2 rounded"><code class="text-white">.gap-5</code></span> <i class="bi bi-arrow-right"></i> Abstand <b>zwischen</b> Flex-Kindern innen.</li>
+                </ul>
+
+        </div>
+
+        <div class="container mt-5">
+
+            <p><b>Display-Utilities (Sichtbarkeit & Darstellung)</b></p>
+                <ul>
+                    <li><span class="bg-secondary  class="text-white"px-2 rounded"><code class="text-white">.d-none|-block|-inline|-inline-block|-flex|-grid</code></span> <i class="bi bi-arrow-right"></i> Anzeigeart festlegen.</li>
+                    <li>Responsive: <span class="bg-secondary  class="text-white"px-2 rounded"><code class="text-white">.d-sm-none</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.d-md-block</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.d-lg-flex</code></span> usw.</li>
+                    <li><span class="bg-secondary  class="text-white"px-2 rounded"><code class="text-white">.visually-hidden</code></span> <i class="bi bi-arrow-right"></i> Für Screenreader sichtbar, optisch versteckt.</li>
+                    <li><span class="bg-secondary  class="text-white"px-2 rounded"><code class="text-white">.invisible</code></span> <i class="bi bi-arrow-right"></i> Unsichtbar, nimmt trotzdem Platz ein.</li>
+                </ul>
+
+            <p><u><b>Merke:</b></u> <span class="bg-secondary  class="text-white"px-2 rounded"><code class="text-white">.d-...</code></span> steuert <b>ob / wie</b> ein Element sichtbar ist; mit Breakpoints sehr mächtig.</p>
+        </div>
+
+        <div class="container mt-5">
+
+            <p><b>Weitere Layout-Helfer (nice to have)</b></p>
+                <ul>
+                    <li>Position / Z-Index: <span class="bg-secondary px-2 rounded"><code class="text-white">.position-static|-relative|-absolute|-fixed|-sticky</code></span> dazu <span class="bg-secondary px-2 rounded"><code class="text-white">.top-0</code></span>, <span class="bg-secondary px-2 rounded"><code class= text-white>.start-50</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.translate-middle</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.z-0|-1|-2|-3</code></span>.</li>
+                    <li>Overflow: <span class="bg-secondary px-2 rounded"><code class="text-white">.overflow-auto|-hidden|-visible|-scroll</code></span>.</li>
+                    <li>Container-Spacing: <span class="bg-secondary px-2 rounded"><code class="text-white">.p-0</code></span> ... <span class="bg-secondary px-2 rounded"><code class="text-white">.p-5</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.m-0</code></span> ... <span class="bg-secondary px-2 rounded"><code class="text-white">.m-5</code></span>, achsenspezifisch: <span class="bg-secondary px-2 rounded"><code class="text-white">.px-3</code></span>,<span class="bg-secondary px-2 rounded"><code class="text-white">.py-2</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.ms-4</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.me-1</code></span>.</li>
+                    <li>Breiten / Höhen: <span class="bg-secondary px-2 rounded"><code class="text-white">.w-25|-50|-75|-100|-auto</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.h-25|-50|-75|-100|-auto</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.mw-100</code></span>, <span class="bg-secondary px-2 rounded"><code class="text-white">.mh-100</code></span>.</li>
+                    <li>Objekt-fit für Bilder: <span class="bg-secondary px-2 rounded"><code class="text-white">.object-fit-contain|-cover|-fill|-scale|-none</code></span> (ggfs. mit eigener CSS-Klasse kombinieren).</li>
+                </ul>
+
+            <p><u><b>Merke:</b></u> Erst das Grid setzen, dann Feinschliff mit Utilities (Display, Spacing, Position).</p>
+        </div>
+
+        </main>
+
         </div>
     </div>
 
-    <h3 class="text-center mt-5">Kapitel 1 - Layout & Grid System</h3>
-<div class="container mt-5">
-
-    <p><b>Container (Grundrahmen / Rahmen für Inhalte)</b></p>
-    <ol>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.container</code></span> <i class="bi bi-arrow-right"></i> Fester, zentrierter Rahmen mit automatischen Seitenabständen.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.container-fluid</code></span> <i class="bi bi-arrow-right"></i> Volle Breite des Bildschirms (ohne Ränder).</li>
-    </ol>
-
-        <p><u><b>Merke:</b></u> Container = "äußerer Rahmen", ohne Container ist Grid wackelig.</p>
-</div>
-
-<div class="container mt-5">
-
-    <p><b>Row & Column (Raster aufbauen)</b></p>
-    <ol>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.row</code></span> <i class="bi bi-arrow-right"></i> Startet eine Zeile im Grid (Raster) 12 Spalten Logik.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.col</code></span> <i class="bi bi-arrow-right"></i> Spalte, die den verfügbaren Platz gleichmäßig aufteilt.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.col-1</code></span> ... <span class="bg-dark text-light px-2 rounded"><code>.col-12</code></span><i class="bi bi-arrow-right"></i> Feste Spaltenbreite (z.B. <span class="bg-dark text-light px-2 rounded"><code>.col-6</code></span> = halbe Breite.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.col-{breakpoint}-{n}</code></span> <i class="bi bi-arrow-right"></i> Responsive Spaltenbreite (z.B. <span class="bg-dark text-light px-2 rounded"><code>col-md-4</code></span>). Ab mittlerer Bildschirmgröße, ein drittel Breite, auf kleineren Geräten automatisch 100%.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.col-auto</code></span> <i class="bi bi-arrow-right"></i> So breit wie der Inhalt, der Rest bleibt frei.</li>
-    </ol>
-
-        <p><u><b>Merke:</b></u> <span class="bg-dark text-light px-2 rounded"><code>row</code></span> enthält <span class="bg-dark text-light px-2 rounded"><code>col</code></span>; Summe der <span class="bg-dark text-light px-2 rounded"><code>col</code></span>-Breiten pro Zeile ≤ 12.</p>
-</div>
-
-<div class="container mt-5">
-
-    <p><b>Gutter (Abstände zwischen Zeilen und Spalten)</b></p>
-    <ol>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.g-0</code></span> <i class="bi bi-arrow-right"></i> Kein Abstand zwischen Spalten.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.g-3</code></span> <i class="bi bi-arrow-right"></i> Standartabstand auf beiden Achsen (Skala 0-5).</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.gx-0</code></span> ... <span class="bg-dark text-light px-2 rounded"><code>.gx-5</code></span> <i class="bi bi-arrow-right"></i> Horizontaler Abstand zwischen Spalten.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.gy-0</code></span> ... <span class="bg-dark text-light px-2 rounded"><code>.gy-5</code></span><i class="bi bi-arrow-right"></i> Vertikaler Abstand zwischen Spalten.</li>
-    </ol>
-</div>
-
-<div class="container mt-5">
-
-    <p><b>Responsive Breakpoints (Größenlogik)</b></p>
-    <ol>
-        <li><span class="bg-dark text-light px-2 rounded"><code>sm</code></span> ≥ 576px, <span class="bg-dark text-light px-2 rounded"><code>md</code></span> ≥ 768px, <span class="bg-dark text-light px-2 rounded"><code>lg</code></span> ≥ 992px, <span class="bg-dark text-light px-2 rounded"><code>xl</code></span> ≥ 1200px, <span class="bg-dark text-light px-2 rounded"><code>xxl</code></span> ≥ 1400px. </li>
-        <li>Beispiel: <span class="bg-dark text-light px-2 rounded"><code>.col.12</code></span> Volle Breite, Mobil / <span class="bg-dark text-light px-2 rounded"><code>.col-md-6</code></span> Halbe Seite ab Medium / <span class="bg-dark text-light px-2 rounded"><code>.col-lg-4</code></span> Drittel Seite ab Large</li>
-        <li>Utilities sind ebenfalls breakpoint-fähig: z.B. <span class="bg-dark text-light px-2 rounded"><code>.d-none</code></span> oder  <span class="bg-dark text-light px-2 rounded"><code>.d-md-block</code></span>.</li>
-    </ol>
-
-    <p><u><b>Merke:</b></u> Klassen mit <span class="bg-dark text-light px-2 rounded"><code>md</code></span> gelten <b>ab</b> diesem Breakpoint aufwärts.</p>
-</div>
-
-<div class="container mt-5">
-
-    <p><b>Flexbox-Utilities (Inhalte positionieren)</b></p>
-    <ol>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.d-flex</code></span> <i class="bi bi-arrow-right"></i> Flex-Layout aktivieren.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.flex-row</code></span> / <span class="bg-dark text-light px-2 rounded"><code>.flex-column</code></span> <i class="bi bi-arrow-right"></i> Richtung waagrecht / senkrecht.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.justify-content-start|-center|-end|-between|-around|-evenly</code></span> Horizontale Ausrichtungsvarianten.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.align-items-start|-center|-end|-stretch</code></span> <i class="bi bi-arrow-right"></i> Vertikal in der Zeile ausrichten.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.flex-wrap</code></span> / <span class="bg-dark text-light px-2 rounded"><code>.flex-nowrap</code></span> <i class="bi bi-arrow-right"></i> Zeilenumbruch erlauben / verhindern.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.align-self-start|-center|-end </code></span> <i class="bi bi-arrow-right"></i> Einzelnes Kind abweichend ausrichten.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.gap-0</code></span> ... <span class="bg-dark text-light px-2 rounded"><code>.gap-5</code></span> <i class="bi bi-arrow-right"></i> Abstand <b>zwischen</b> Flex-Kindern innen.</li>
-        </o>
-
-</div>
-
-<div class="container mt-5">
-
-    <p><b>Display-Utilities (Sichtbarkeit & Darstellung)</b></p>
-    <ol>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.d-none|-block|-inline|-inline-block|-flex|-grid</code></span> <i class="bi bi-arrow-right"></i> Anzeigeart festlegen.</li>
-        <li>Responsive: <span class="bg-dark text-light px-2 rounded"><code>.d-sm-none</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.d-md-block</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.d-lg-flex</code></span> usw.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.visually-hidden</code></span> <i class="bi bi-arrow-right"></i> Für Screenreader sichtbar, optisch versteckt.</li>
-        <li><span class="bg-dark text-light px-2 rounded"><code>.invisible</code></span> <i class="bi bi-arrow-right"></i> Unsichtbar, nimmt trotzdem Platz ein.</li>
-        </o>
-
-        <p><u><b>Merke:</b></u> <span class="bg-dark text-light px-2 rounded"><code>.d-...</code></span> steuert <b>ob / wie</b> ein Element sichtbar ist; mit Breakpoints sehr mächtig.</p>
-</div>
-
-<div class="container mt-5">
-
-    <p><b>Weitere Layout-Helfer (nice to have)</b></p>
-    <ol>
-        <li>Position / Z-Index: <span class="bg-dark text-light px-2 rounded"><code>.position-static|-relative|-absolute|-fixed|-sticky</code></span> dazu <span class="bg-dark text-light px-2 rounded"><code>.top-0</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.start-50</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.translate-middle</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.z-0|-1|-2|-3</code></span>.</li>
-        <li>Overflow: <span class="bg-dark text-light px-2 rounded"><code>.overflow-auto|-hidden|-visible|-scroll</code></span>.</li>
-        <li>Container-Spacing: <span class="bg-dark text-light px-2 rounded"><code>.p-0</code></span> ... <span class="bg-dark text-light px-2 rounded"><code>.p-5</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.m-0</code></span> ... <span class="bg-dark text-light px-2 rounded"><code>.m-5</code></span>, achsenspezifisch: <span class="bg-dark text-light px-2 rounded"><code>.px-3</code></span>,<span class="bg-dark text-light px-2 rounded"><code>.py-2</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.ms-4</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.me-1</code></span>.</li>
-        <li>Breiten / Höhen: <span class="bg-dark text-light px-2 rounded"><code>.w-25|-50|-75|-100|-auto</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.h-25|-50|-75|-100|-auto</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.mw-100</code></span>, <span class="bg-dark text-light px-2 rounded"><code>.mh-100</code></span>.</li>
-        <li>Objekt-fit für Bilder: <span class="bg-dark text-light px-2 rounded"><code>.object-fit-contain|-cover|-fill|-scale|-none</code></span> (ggfs. mit eigener CSS-Klasse kombinieren).</li>
-        </ol>
-
-        <p><u><b>Merke:</b></u> Erst das Grid setzen, dann Feinschliff mit Utilities (Display, Spacing, Position).</p>
-</div>
-
-
-
-<div class="container mt-5">
-
-    <p><b>Parkplatz</b></p>
-    <ol>
-
-
-
-        </o>
-</div>
-</main>
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileSidebarLabel">Navigation</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="einleitung_html.html">Einleitung HTML</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_4.html">Spacing (Abstände)</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_5.html">Buttons</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_6.html">Forms</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="mobileSidebarLabel">Navigation</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
-    </div>
-    <div class="offcanvas-body">
-        <ol>
-            <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_4.html">Spacing (Abstände)</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_5.html">Buttons</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_6.html">Forms</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
-            <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
-        </ol>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    </div>
-</div>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
+    <script>
     (() => {
         const KEY = "theme";
         const root = document.documentElement;
+        const body = document.body;
         const sw = document.getElementById("themeSwitch");
         const icon = document.getElementById("themeIcon");
         if (!sw) return;
 
-        // Startzustand setzen
+        function updateBodyBackground(mode) {
+            body.classList.remove("bg-body-secondary", "bg-body");
+            if (mode === "light") {
+                body.classList.add("bg-body-secondary");
+            } else {
+                body.classList.add("bg-body");
+            }
+        }
+
         const isDark = root.getAttribute("data-bs-theme") === "dark";
         sw.checked = isDark;
         icon.textContent = isDark ? "🌙" : "🌞";
+        updateBodyBackground(isDark ? "dark" : "light");
 
-        // Umschalten + merken
         sw.addEventListener("change", () => {
             const mode = sw.checked ? "dark" : "light";
             root.setAttribute("data-bs-theme", mode);
             localStorage.setItem(KEY, mode);
             icon.textContent = mode === "dark" ? "🌙" : "🌞";
+            updateBodyBackground(mode);
         });
     })();
-</script>
+    </script>
 
 </body>
 </html>
