@@ -19,25 +19,36 @@
 </head>
 <body>
 <div class="container-fluid">
+
+    <div class="d-md-none bg-tertiary p-2">
+        <button class="btn btn-outline-secondary btn-sm"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#mobileSidebar"
+                aria-controls="mobileSidebar">
+            <i class="bi bi-list"></i> Menü
+        </button>
+    </div>
+
     <div class="row">
 
-        <nav class="col-3 col-md-2 bg-tertiary p-3">
+        <nav class="d-none d-md-block col-md-3 bg-tertiary p-3">
             <ol>
                 <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%201.html">Layout / Grid System</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%202.html">Typografie</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%203.html">Farben & Hintergrund</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%204.html">Spacing (Abstände)</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%205.html">Buttons</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%206.html">Forms</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%207.html">Komponenten</a></li>
-                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel%208.html">Utilities</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_4.html">Spacing (Abstände)</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_5.html">Buttons</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_6.html">Forms</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
+                <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
                 <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
             </ol>
         </nav>
 
 
-<main class="col-9 col-md-10">
+        <main class="col-12 col-md-9">
 
     <div class="container mt-3 d-flex justify-content-end">
         <div class="form-check form-switch m-0">
@@ -153,6 +164,29 @@
 </main>
     </div>
 </div>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="mobileSidebarLabel">Navigation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Schließen"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ol>
+            <li class="nav-item mt-2"><a class="nav-link active" href="index.html">Start</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_1.html">Layout / Grid System</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_2.html">Typografie</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_3.html">Farben & Hintergrund</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_4.html">Spacing (Abstände)</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_5.html">Buttons</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_6.html">Forms</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_7.html">Komponenten</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="kapitel_8.html">Utilities</a></li>
+            <li class="nav-item mt-2"><a class="nav-link active" href="parkplatz.html">Parkplatz</a></li>
+        </ol>
+
+    </div>
+</div>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
